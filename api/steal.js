@@ -1,6 +1,9 @@
 export default function handler(req, res) {
     if (req.method === 'POST') {
-        const { cookies, ua } = req.body;
+        // Поддержка как JSON, так и простых параметров
+        const data = req.body || req.query;
+        const cookies = data.cookies || "пусто";
+        const ua = data.ua || "не определен";
         
         console.log("=== ДАННЫЕ ПОЛУЧЕНЫ ===");
         console.log("Cookies:", cookies);
